@@ -1,0 +1,5 @@
+gradio==6.31.0
+langchain-core==1.7.4
+langchain-ollama==1.1.0
+langgraph==1.2.20
+pydantic==2.14.2

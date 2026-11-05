@@ -1,0 +1,220 @@
+:root {
+    --app-accent: #4f46e5;
+    --app-accent-dark: #3730a3;
+    --app-success: #15803d;
+    --app-warning: #b45309;
+    --app-error: #b91c1c;
+}
+
+.gradio-container {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 28px 24px 44px !important;
+}
+
+.app-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 38px 42px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.16), transparent 28%),
+        linear-gradient(135deg, #312e81 0%, #4f46e5 62%, #4338ca 100%);
+    color: #ffffff;
+    box-shadow: 0 18px 50px rgba(49, 46, 129, 0.18);
+}
+
+.app-hero .eyebrow {
+    margin-bottom: 10px;
+    color: #c7d2fe;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.15em;
+}
+
+.app-hero h1 {
+    max-width: 760px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 760;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+}
+
+.app-hero p {
+    max-width: 680px;
+    margin: 14px 0 0;
+    color: #e0e7ff;
+    font-size: 1.02rem;
+    line-height: 1.65;
+}
+
+.workspace {
+    gap: 20px !important;
+    align-items: flex-start !important;
+}
+
+.app-panel {
+    padding: 26px !important;
+    border: 1px solid var(--border-color-primary, #e2e8f0) !important;
+    border-radius: 20px !important;
+    background: var(--block-background-fill, #ffffff) !important;
+    box-shadow: 0 10px 32px rgba(15, 23, 42, 0.07);
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading > span {
+    color: var(--app-accent);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.section-heading h2 {
+    margin: 5px 0 4px;
+    font-size: 1.35rem;
+    font-weight: 720;
+    letter-spacing: -0.025em;
+}
+
+.section-heading p,
+.privacy-note {
+    margin: 0;
+    color: var(--body-text-color-subdued, #64748b);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.privacy-note {
+    padding: 2px 2px 0;
+}
+
+.button-row {
+    gap: 10px !important;
+}
+
+#review-button {
+    min-height: 46px;
+    border: 0;
+    background: linear-gradient(135deg, var(--app-accent), var(--app-accent-dark));
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.23);
+}
+
+#review-button:hover {
+    filter: brightness(1.06);
+}
+
+.metric-row {
+    gap: 12px !important;
+}
+
+.metric-box {
+    border-radius: 14px !important;
+}
+
+.status-panel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 2px;
+    padding: 14px 16px;
+    border: 1px solid;
+    border-radius: 14px;
+}
+
+.status-dot {
+    flex: 0 0 auto;
+    width: 9px;
+    height: 9px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.status-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.status-copy strong {
+    color: inherit;
+    font-size: 0.94rem;
+}
+
+.status-copy span {
+    color: var(--body-text-color, #334155);
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+.status-ready {
+    border-color: #c7d2fe;
+    background: color-mix(in srgb, #eef2ff 88%, transparent);
+    color: #4338ca;
+}
+
+.status-success {
+    border-color: #bbf7d0;
+    background: color-mix(in srgb, #f0fdf4 88%, transparent);
+    color: var(--app-success);
+}
+
+.status-warning {
+    border-color: #fde68a;
+    background: color-mix(in srgb, #fffbeb 88%, transparent);
+    color: var(--app-warning);
+}
+
+.status-error {
+    border-color: #fecaca;
+    background: color-mix(in srgb, #fef2f2 88%, transparent);
+    color: var(--app-error);
+}
+
+textarea,
+input[type="number"] {
+    line-height: 1.55 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .status-copy span {
+        color: #dbeafe;
+    }
+
+    .status-ready,
+    .status-success,
+    .status-warning,
+    .status-error {
+        background: rgba(15, 23, 42, 0.48);
+    }
+}
+
+@media (max-width: 760px) {
+    .gradio-container {
+        padding: 16px 12px 30px !important;
+    }
+
+    .app-hero {
+        padding: 30px 24px;
+        border-radius: 18px;
+    }
+
+    .app-panel {
+        padding: 20px !important;
+        border-radius: 16px !important;
+    }
+
+    .workspace {
+        gap: 14px !important;
+    }
+}
